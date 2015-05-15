@@ -1,0 +1,116 @@
+body {
+    background-color: #939393;
+}
+
+header {
+    background-color: #006bb5;
+    height: 170px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#NBAlogo {
+    margin-bottom: 16px;
+    margin-left: 40px;
+}
+
+#finalsLogo {
+    margin: 27px 0px 30px;
+    height: 116px;
+    width: 380px;
+}
+
+#finalsTrophy {
+    margin-bottom: 23px;
+}
+
+.scores {
+    background-color: white;
+    border-color: #006bb5;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 20px;
+    height: 116px;
+}
+
+#lakersLogo {
+    margin-left: 20px;
+    margin-top: 8px;
+    width: 156px;
+    height: 100px;
+}
+
+#celticsLogo {
+    margin-left: 20px;
+    width: 90px;
+    height: 100px;
+}
+
+.lakersRings, .celticsRings {
+    height: 80px;
+    width: 80px;
+    /*background-color: blue;*/
+    display: inline-block;
+    margin-bottom: 9px;
+    border-bottom-color: black;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    margin-left:4px;
+}
+
+.container {
+    margin-top: 10px;
+    height: 720px;
+    width: 1200px;
+    background-image: url("images/backgroundCourt.png");
+    text-align: center;
+}
+
+#board {
+    height: 600px;
+    width: 600px;
+    margin: 58px auto;
+}
+.boardWrapper {
+    width: 50%;
+    margin: 0 auto;
+    position:relative;
+    bottom:90%;
+}
+.cell {
+    height: 189px;
+    width: 32%;
+    /*border-color: blue;*/
+    /*border-style: solid;*/
+    /*border-width: 2px;*/
+    position: relative;
+    display: inline-block;
+}
+.lakers {
+    background: url("images/lakers_logo_mini.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.celtics {
+    background: url("images/celtics_logo_mini.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.lakersFill {
+    background: url("images/lakers_ring_mini.jpeg");
+    background-repeat: no-repeat;
+}
+.celticsFill {
+    background: url("images/celtics_ring_mini.jpeg");
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+
+
+

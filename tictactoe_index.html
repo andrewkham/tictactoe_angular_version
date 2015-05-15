@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="tictactoe_style.css">
+<script src="angular/angular.js"></script>
+<script src="angular/firebase.js"></script>
+<script src="angular/angularfire.js"></script>
+<script src="tictactoe_app.js"></script>
+<script src="tictactoe_controller.js"></script>
+
+<head>
+    <title>Tic Tac Toe</title>
+</head>
+
+<body ng-app="tictactoeApp" ng-controller="tictactoeController as tictactoeCtrl">
+    <header>
+        {{2+2}}
+        <img id="NBAlogo" src="images/nba-logo.png">
+        <img id="finalsLogo" src="images/NBA_Finals_logo.png">
+        <img id="finalsTrophy" src="images/finalsTrophy.png" </header>
+        <div class="scores">
+            <img id="lakersLogo" src="images/lakers_logo.png">
+            <div class="lakersRings" ng-repeat="lakersSlot in tictactoeCtrl.lakersRings" ng-class = "{ 'lakersFill': lakersSlot.lakersRing }"></div>
+            <img id="celticsLogo" src="images/celtics_logo.png">
+            <div class="celticsRings" ng-repeat="celticsSlot in tictactoeCtrl.celticsRings" ng-class = "{ 'celticsFill': celticsSlot.celticsRing }"></div>
+        </div>
+        <div class="container">
+            <img id="board" src="images/board.png">
+            <div class="boardWrapper">
+                <div class="cell" ng-repeat="cell in tictactoeCtrl.cells track by $index" ng-click="tictactoeCtrl.chooseBox($index)" ng-class = "{ 'lakers': cell.isLakers, 'celtics': cell.isCeltics }"></div>
+            </div>
+            <!-- <script type="text/javascript" src="tictactoe_logic.js"></script> -->
+        </div>
+</body>
+
+</html>
