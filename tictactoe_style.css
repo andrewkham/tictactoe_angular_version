@@ -86,6 +86,10 @@ header {
     position: relative;
     display: inline-block;
 }
+/*.cell: Hover {
+    background-color: #006bb5;
+    opacity: 0.2;
+}*/
 .lakers {
     background: url("images/lakers_logo_mini.png");
     background-repeat: no-repeat;

@@ -2,9 +2,9 @@ angular
     .module("tictactoeApp")
     .controller("tictactoeController", tictactoeController);
 
-tictactoeController.$inject = ['$firebaseArray'];
+tictactoeController.$inject = ['$firebaseObject'];
 
-function tictactoeController($firebaseArray) {
+function tictactoeController($firebaseObject) {
     var self = this;
     self.Lakers = '<img src="images/lakers_logo_mini.png">';
     self.Celtics = '<img src="images/celtics_logo_mini.gif">';
@@ -18,7 +18,15 @@ function tictactoeController($firebaseArray) {
     self.lakersRingCount = 0;
     self.celticsRingCount = 0;
     self.updateScoreboard = updateScoreboard;
+    // self.getGame = getGame();
 
+    // function getGame($index) {
+    //     var ref = new $FirebaseObject (url: "")
+    //     function getCells($index){
+    //     }
+    //     function getlakersRings($index){}
+    //     function getcelticsRings($index){}
+    // }
 
 
     self.cells = [
@@ -45,7 +53,7 @@ function tictactoeController($firebaseArray) {
         {celticsRing: false},
         {celticsRing: false},
         {celticsRing: false},
-    ];
+        ];
 /*
 This function essentially initiates the game by establishing which
 cells are taken and inserting input values per cell.
