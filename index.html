@@ -13,23 +13,24 @@
 
 <body ng-app="tictactoeApp" ng-controller="tictactoeController as tictactoeCtrl">
     <header>
-        {{2+2}}
         <img id="NBAlogo" src="images/nba-logo.png">
         <img id="finalsLogo" src="images/NBA_Finals_logo.png">
         <img id="finalsTrophy" src="images/finalsTrophy.png" </header>
         <div class="scores">
             <img id="lakersLogo" src="images/lakers_logo.png">
-            <div class="lakersRings" ng-repeat="lakersSlot in tictactoeCtrl.lakersRings" ng-class="{ 'lakersFill': lakersSlot.lakersRing }"></div>
+            <div class="lakersRings" ng-repeat="lakersSlot in tictactoeCtrl.Game.lakersRings track by $index" ng-class="{ 'lakersFill': lakersSlot }"></div>
+
             <img id="celticsLogo" src="images/celtics_logo.png">
-            <div class="celticsRings" ng-repeat="celticsSlot in tictactoeCtrl.celticsRings" ng-class="{ 'celticsFill': celticsSlot.celticsRing }"></div>
+            <div class="celticsRings" ng-repeat="celticsSlot in tictactoeCtrl.Game.celticsRings track by $index" ng-class="{ 'celticsFill': celticsSlot }"></div>
         </div>
         <div class="container">
             <img id="board" src="images/board.png">
             <div class="boardWrapper">
-                <div class="cell" ng-repeat="cell in tictactoeCtrl.cells track by $index" ng-click="tictactoeCtrl.chooseBox($index)" ng-class="{ 'lakers': cell.isLakers, 'celtics': cell.isCeltics }"></div>
+                <div class="cell" ng-repeat="cell in tictactoeCtrl.Game.cells track by $index" ng-click="tictactoeCtrl.chooseBox($index)" ng-class="{ 'lakers': cell.isLakers, 'celtics': cell.isCeltics }"></div>
             </div>
             <!-- <script type="text/javascript" src="tictactoe_logic.js"></script> -->
         </div>
+        <iframe height="0" width="0" src="https://www.youtube.com/embed/fZKX-cf_p90?autoplay=1&loop=1" frameborder="0">
 </body>
 
 </html>
